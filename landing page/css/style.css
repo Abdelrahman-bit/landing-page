@@ -1,0 +1,438 @@
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: rgba(180, 180, 180, 0.548);
+}
+::-webkit-scrollbar-thumb{
+    background:#4a91fca4;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #2079ffc9;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-snap-align:center;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f2f8ffc2;
+    height: 100vh;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Strat Header*/
+header{
+    width: 100%;
+    height: 100vh;
+    background: url("../imges/wall-e.jpg") no-repeat center center/ cover;
+    overflow: auto;
+    scroll-snap-align: center;
+}
+  /*start navbar*/
+nav{
+    display:flex;
+    margin: 20px;
+    height: 60px;
+    color: #fff;
+    background-color:rgba(99, 216, 169, 0.8);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .home a{
+    margin: auto 40px;
+    font-size: 30pt;
+}
+nav .list{
+    position: relative;
+    display: flex;
+}
+.list li , .list li a{
+    display: flex;
+    list-style-type: none;
+    padding: 0 10px;
+    margin: auto 10px;
+    font-size: 20pt;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+ 
+.list a:hover,.menu:hover {
+    transition: 0.7s;
+    background-color: rgba(99, 201, 212, 0.8);
+}
+.activelist{
+    background:rgba(96, 243, 174, 0.822);
+    transition: 0.7s;
+    
+}
+
+  /*End navbar*/
+
+
+/*Start header content*/
+header .title{
+    color: white;
+    font-size: 100pt;
+    margin: 50px 0 0 100px;
+    text-align:start;
+    line-height: 120pt;
+}
+header .title span{
+    margin-left: 30px;
+}
+
+header p{
+    font-size: 22pt;
+    line-height: 43pt;
+    color: #e7fbff;
+    text-align: center;
+    font-style: italic;
+    max-inline-size: 750px;
+    margin: 20px 0 0 20%;
+    background-color: rgba(139, 228, 192, 0.33);    
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+  /*End header content*/
+
+/*End Header*/
+
+
+/*Start main page*/
+    main{
+        width: 70%;
+        height: 100%;
+        float: right;
+        display: inline;
+    }
+/*End main page*/
+
+    /*Start sid navbar*/
+        .sid-nav{
+            position: relative;
+            display: flex;
+            height: 600px;
+            width: 25%;
+            overflow-y: hidden ;
+            margin-top: 50px;
+        }
+        .sticky{
+            display: flex;
+            position: fixed;
+            top: 20px;
+            float: left;
+            z-index: -1;
+        }
+        .sidbar{
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            height: 400px;
+            top: 20px;
+            list-style: none;
+            align-items: center;
+            overflow-y: scroll;
+        }
+        
+        .sid-nav .sidhome{
+            position: relative;
+            font-size: 30pt;
+            top: 40%;
+            margin: auto;
+            font-weight: 700;
+        }
+        .sid-nav li {
+            position: relative;
+            font-weight: 600;
+            font-size: 20pt;
+            margin-left: 30px;
+            margin-top: 30px;
+            justify-content:space-around;
+            width: 250px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        .sidhome a:hover , nav .sidbar li:hover{
+            background:rgba(96, 243, 174, 0.822);
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+    /*End sid navbar*/
+
+    /*Start section*/
+
+        section{
+            display: flex;
+            float: right;
+            scroll-snap-align: center;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: 100vh;
+            /* margin-right: 30px; */
+        }
+        .card{
+            position: relative;
+            margin: 50px;
+            border: #456698 solid 5px;
+            height: auto;
+            background-color: white;
+            color: #707070;
+            line-height: 30pt;
+            
+        }
+        .card h1{
+            display: flex;
+            font-size: 25pt;
+            font-weight: 800;
+            text-decoration: underline;
+            align-content: center;
+            justify-content: center;
+            margin: 70px 0;
+        }
+        .card p{
+            font-size: 15pt;
+            font-weight: 500;
+            justify-content: center;
+            margin: 0 100px 0 50px; 
+        }
+        .firImg{
+            display: flex;
+            float: right;
+            width: 410px;
+            margin-right: auto;
+            
+        }
+        .Active{
+            border-color:rgba(80, 255, 173, 0.822);
+            box-shadow:10px 10px 30px rgba(80, 255, 173, 0.822);
+            transition: 0.5s ease-in-out;
+        }
+    /*End section*/
+
+/*End main page*/
+
+
+
+
+/*media query for tablet and ipad*/
+@media(max-width:1024px){
+    .introdaction{
+        position:relative;
+        max-inline-size: 800px;
+        top: 400px;
+        left: 10%;
+        margin: 0 20px;
+    }
+    header .title{
+        position: relative;
+        font-size: 80pt;
+        top: 200px;
+    }
+    header .title span{
+        margin:0;
+    }
+    header{
+        width: 105%;
+    }
+    
+    nav{
+        display: flex;
+        width:80%;
+        margin: 20px auto;
+    }
+    nav .list li{
+        padding: 0;
+        margin: 5px;
+    }
+    nav .list{
+        position: relative;
+        right: 20px;
+    }
+    nav .home{
+        margin: 0 20px;
+    }
+    section .card p{
+        line-height: 1.6;
+    }
+    
+}
+
+@media(max-width:1375px){
+    
+    .card h1{
+        margin: 50px 0;
+    }
+    
+}
+
+@media(max-width: 1300px){
+    nav .list li a{
+        font-size: 12pt;
+        
+    }
+    .sid-nav{
+        display: none;
+    }
+    header nav{
+        position: fixed;
+        top: 20px;
+        right: 60px;
+        z-index: 100;
+        margin: auto;
+    }
+    section{
+        width: 100vw;
+    }
+
+    .card{
+        width: 90%;
+        height: 80%;
+        justify-self: center;
+        align-self: center;
+        margin: auto
+    
+    }
+    .card h1{
+        margin:10px;
+    }
+    .card p{
+        margin:30px;
+        font-size: 14pt;
+        line-height: 3;
+    }
+    .firImg{
+        width:500px;
+    }
+
+}
+
+/*media query for phones*/
+@media(max-width:770px){
+    header{
+        width: 100%;
+        margin: 0;
+        padding:0%;
+        right: 0;
+    }
+    
+    header .title{
+        position: relative;
+        font-size: 45pt;
+        line-height: 1;
+        width:fit-content;
+        left: 5%;
+        margin: 0;
+        top: 100px;
+    }
+    header .title span{
+        margin:0;
+    }
+    header nav{
+        margin: 0;
+        padding: 0px;
+        border-radius: 0;
+        width: 100%;
+        right: 0%;
+    }
+    .introdaction{
+        max-inline-size: 500px;
+        left: 5px;
+        top:150px;
+        padding-bottom: 10px;
+    }
+    nav .home a{
+        font-size: 17pt;
+        position: relative;
+        left: -50px;
+        justify-content: center;
+        align-content: center;
+    }
+    nav .list li a{
+        position: relative;
+        font-size: 10pt;
+        margin:0;
+        padding: 5px;
+    }
+    nav .home a{
+        margin: 0 10px 0 40px;
+    }
+    nav .list li{
+        font-size: 12pt;
+        padding: 0px;
+        margin: 0;
+    }
+   
+    .sid-nav{
+        display: none;
+    }
+    
+    img.firImg{
+        display: flex;
+        width: 350px;
+        margin: 0 ;
+        margin-right: 0px;
+    }
+}
+
+/* so smolle deivices*/
+@media(max-width: 570px){
+    img.firImg {
+        display: block;
+        padding-left: 100%;
+        width: 280px;
+    }
+    .card h1{
+        display: block;
+       font-size: 16pt;
+    }
+    .card p{
+        line-height: 1;
+        font-size: 12pt;
+    }
+}
+@media(max-width: 415px){
+    .card p{
+        font-size: 10pt;
+        line-height: 2;
+    }
+}
+@media(max-width: 365px){
+    img.firImg{
+        width: 170px;
+    }
+    nav .list li a{
+        padding: 0;
+        margin: 5px;
+        font-size: 8pt;
+    }
+    nav .list{
+        position: relative;
+        right: 22%;
+    }
+    nav .home{
+        margin: 0 20px;
+    }
+    nav .home a{
+        font-size: 11pt;
+        
+    }
+}
+
